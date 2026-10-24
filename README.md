@@ -3,6 +3,14 @@ SPDX-FileCopyrightText: 2026 shadPS4 Emulator Project
 SPDX-License-Identifier: GPL-2.0-or-later
 -->
 
+> [!IMPORTANT]
+> **Personal fork for Platinum Demo – Final Fantasy XV (CUSA04568).**
+> This fork combines [#5279](https://github.com/shadps4-emu/shadPS4/pull/5279) to address texture flickering and color issues with [#5503](https://github.com/shadps4-emu/shadPS4/pull/5503) to correct lighting issues.
+>
+> Its sole purpose is to preserve this working version for the demo. No further updates or ongoing maintenance are planned. Once upstream shadPS4 includes both fixes, or equivalent changes that resolve these issues, this fork will no longer be needed. Please use the [upstream project](https://github.com/shadps4-emu/shadPS4) for continued development and updates.
+>
+> Testing was limited to the opening and house scenes on Linux with an NVIDIA RTX 3070 Laptop GPU. The full demo, other hardware, and other games have not been validated with this fork.
+
 <h1 align="center">
   <br>
   <a href="https://shadps4.net/"><img src="https://github.com/shadps4-emu/shadPS4/blob/main/.github/shadps4.png" width="220"></a>
