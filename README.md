@@ -5,11 +5,19 @@ SPDX-License-Identifier: GPL-2.0-or-later
 
 > [!IMPORTANT]
 > **Personal fork for Platinum Demo – Final Fantasy XV (CUSA04568).**
+>
 > This fork combines [#5279](https://github.com/shadps4-emu/shadPS4/pull/5279) to address texture flickering and color issues with [#5503](https://github.com/shadps4-emu/shadPS4/pull/5503) to correct lighting issues.
 >
-> Its sole purpose is to preserve this working version for the demo. No further updates or ongoing maintenance are planned. Once upstream shadPS4 includes both fixes, or equivalent changes that resolve these issues, this fork will no longer be needed. Please use the [upstream project](https://github.com/shadps4-emu/shadPS4) for continued development and updates.
+> **The demo was played through to completion** on Linux with an NVIDIA RTX 3070 Laptop GPU. It is playable from start to finish on this setup, with the remaining issues described below. Other hardware has not been validated.
 >
-> Testing was limited to the opening and house scenes on Linux with an NVIDIA RTX 3070 Laptop GPU. The full demo, other hardware, and other games have not been validated with this fork.
+> **Known issues and investigation notes**
+>
+> - **Altissia:** some distant scenery still flickers. The log reports `Ballot instruction in non uniform control flow` when compiling compute shader `0x9cd3afe6` near the transition into Altissia. This points to a possible limitation in wave64 emulation on GPUs with 32-thread subgroups. Texture-copy layer-count mismatch warnings also occur in this section. Neither warning has been confirmed as the cause; a RenderDoc capture of the affected scenery would help investigate.
+> - **Insomnia:** performance drops during the final battle. The log records substantial shader compilation activity in this section, with the persistent pipeline cache disabled and synchronous logging enabled. These may contribute to stuttering, but no frame-time measurements were collected to distinguish compilation stalls from sustained rendering costs.
+>
+> Its sole purpose is to preserve this working version for the demo. No further updates or ongoing maintenance are planned. The notes above are included for anyone wishing to investigate the remaining issues.
+>
+> Once upstream shadPS4 includes both fixes, or equivalent changes that resolve the issues addressed here, this fork will no longer be needed. Please use the [upstream project](https://github.com/shadps4-emu/shadPS4) for continued development and updates.
 
 <h1 align="center">
   <br>
